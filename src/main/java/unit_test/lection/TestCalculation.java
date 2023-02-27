@@ -23,8 +23,8 @@ public class TestCalculation {
      */
     public static void testCalculatingDiscount() {
         assertThatThrownBy(() -> Calculator.calculatingDiscount(-1, 5)).isInstanceOf(ArithmeticException.class);
-        assertThatThrownBy(() -> Calculator.calculatingDiscount(100, -23)).isInstanceOf(ArithmeticException.class);
-        assertThatThrownBy(() -> Calculator.calculatingDiscount(100, 100)).isInstanceOf(ArithmeticException.class);
+        assertThatThrownBy(() -> Calculator.calculatingDiscount(100, -1)).isInstanceOf(ArithmeticException.class);
+        assertThatThrownBy(() -> Calculator.calculatingDiscount(100, 101)).isInstanceOf(ArithmeticException.class);
 
         assertThat(Calculator.calculatingDiscount(0, 5)).isEqualTo(0);
         assertThat(Calculator.calculatingDiscount(100, 0)).isEqualTo(100);
